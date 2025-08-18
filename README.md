@@ -39,3 +39,29 @@ pip install -r requirements.txt
 
 # Run server
 python manage.py runserver
+
+
+📌 Progress Timeline
+
+18 Aug 2025 → 🟢 Step 1 Complete:
+
+Implemented resume preprocessing (cleaning, stopword removal, lemmatization)
+
+Built TF-IDF vectorization pipeline to convert resumes into numerical features
+
+Verified output on sample resumes (shape (3, 20) feature matrix)
+
+🔜 Next Step: Move from TF-IDF → Embeddings (Word2Vec/BERT) and implement resume–job description similarity scoring.
+
+📊 Example Output
+
+Cleaned Resumes:
+
+experienced data scientist skill python machine learning nlp
+software engineer skilled java spring boot microservices
+aiml engineer handson tensorflow pytorch scikitlearn
+
+
+TF-IDF Shape:
+
+(3, 20)
