@@ -65,3 +65,13 @@ aiml engineer handson tensorflow pytorch scikitlearn
 TF-IDF Shape:
 
 (3, 20)
+
+
+## Daily Progress
+
+**Date:** 18th August 2025  
+
+- Explored how recruiters currently check resumes with keyword-based methods.  
+- Researched the limitations of simple keyword matching between **resumes & job descriptions**.  
+- Started implementing **BERT embeddings** for better context-aware **resume ↔ JD matching**.  
+- Shared insights on X about resume screening & AI-powered improvements.  
