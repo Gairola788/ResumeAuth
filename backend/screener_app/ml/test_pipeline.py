@@ -4,12 +4,14 @@ from screener_app.ml.vectorizer import ResumeVectorizer
 from screener_app.ml.matcher import match_resume_to_jd
 from screener_app.ml.keyword_matcher import weighted_skill_match
 
-# 🧾 Sample Resumes
+
+# Sample Resumes
 resumes = [
     "Experienced Data Scientist with skills in Python, Machine Learning, and NLP.",
     "Software Engineer skilled in Java, Spring Boot, and Microservices.",
     "AI/ML Engineer with hands-on in TensorFlow, PyTorch, and Scikit-learn."
 ]
+
 
 # 🧠 Job Description
 jd = "Looking for a Python developer with ML and NLP experience."
@@ -39,6 +41,7 @@ for i, resume in enumerate(resumes, 1):
     tfidf_score = match_resume_to_jd([resume], jd)[0][1]
     semantic_score = semantic_similarity(resume, jd)
     weighted_skill_score = weighted_skill_match(resume, jd)
+
 
     # Weighted combination (tuneable)
     final_score = (0.5 * semantic_score) + (0.3 * tfidf_score) + (0.2 * weighted_skill_score)
