@@ -1,10 +1,8 @@
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
+from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def semantic_similarity(text1, text2):
-    emb1 = model.encode(text1)
-    emb2 = model.encode(text2)
-    similarity = cosine_similarity([emb1], [emb2])[0][0]
-    return float(similarity)
+    emb = model.encode([text1, text2], convert_to_tensor=True)
+    score = util.cos_sim(emb[0], emb[1])
+    return score.item()
