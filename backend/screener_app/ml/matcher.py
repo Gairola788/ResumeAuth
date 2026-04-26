@@ -40,8 +40,8 @@ def match_resume_to_jd(resumesform,job_description):
     
     """
     
-    
-    documents = [resumesform, job_description]
+    documents = resumesform + [job_description]
+   #  documents = [resumesform, job_description]
  #Combines resumes + JD
     vectorizer = TfidfVectorizer(stop_words="english")
     tfidf_matrix = vectorizer.fit_transform(documents)
